@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบสอบถามความชอบแนวอนิเมะ</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: ghostwhite;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color:white;
+            width: 100%;
+            max-width: 650px;
+            padding: 35px 40px;
+            border-radius: 12px;
+            border: 1px solid white;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+        h3 {
+            color: #34495e;
+            border-bottom: 2px solid white;
+            padding-bottom: 8px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        label {
+            color: gray;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 6px;
+            margin-bottom: 12px;
+            border: 1px solid gray;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+        input[type="text"]:focus, select:focus, textarea:focus {
+            border-color: lightblue;
+            outline: none;
+        }
+        .checkbox-group, .radio-group {
+            margin-bottom: 8px;
+        }
+        .checkbox-group label, .radio-group label {
+            font-weight: normal;
+            margin-left: 6px;
+            cursor: pointer;
+        }
+        .button-group {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 24px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        input[type="submit"] {
+            background-color: #3182ce;
+            color: white;
+        }
+        input[type="submit"]:hover {
+            background-color: #2b6cb0;
+        }
+        input[type="reset"] {
+            background-color: #e2e8f0;
+            color: #4a5568;
+        }
+        input[type="reset"]:hover {
+            background-color: #cbd5e0;
+        }
+        .this-is-me-box {
+            background-color: #f7fafc;
+            border: 1px dashed #cbd5e0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>แบบสอบถามความชอบแนวอนิเมะของนักศึกษา</h1>
+        
+        <form action="confirmed.html" method="get">
+            <h3>ข้อมูลผู้ตอบแบบสอบถาม</h3>
+            
+            <label for="student_name">ชื่อ-นามสกุล:</label>
+            <input type="text" id="student_name" name="student_name" placeholder="ระบุชื่อ-นามสกุล" required>
+            
+            <label for="student_id">รหัสนักศึกษา:</label>
+            <input type="text" id="student_id" name="student_id" placeholder="ระบุรหัสนักศึกษา" required>
+            
+            <label for="faculty">คณะ / สาขาวิชา:</label>
+            <input type="text" id="faculty" name="faculty" placeholder="ระบุคณะ/สาขาวิชา" required>
+
+            <h3>แนวอนิเมะที่คุณชอบดู (เลือกได้มากกว่า 1 ข้อ)</h3>
+            <div class="checkbox-group">
+                <input type="checkbox" id="genre_action" name="genre" value="Action">
+                <label for="genre_action">แนวแอ็กชัน / ผจญภัย (Action / Adventure)</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="genre_Isekai" name="genre" value="Isekai">
+                <label for="genre_Isekai">แนวต่างโลก (Isekai)</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="genre_Romance" name="genre" value="Romance">
+                <label for="genre_Romance">แนวโรแมนติก / รักวัยรุ่น (Romance)</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="genre_Slice of Life" name="genre" value="Slice of Life">
+                <label for="Slice of Life">แนวชีวิตประจำวัน (Slice of Life)</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="genre_Shonen" name="genre" value="Shonen">
+                <label for="genre_Shonen">แนวโชเน็น (Shonen)</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="genre_Sci-Fi" name="genre" value="Sci-Fi">
+                <label for="genre_Sci-Fi">แนวไซไฟ / เมะก้า (Sci-Fi / Mecha)</label>
+            </div>
+
+            <h3>สัญชาติของอนิเมะที่ชอบดูมากที่สุด</h3>
+            <div class="radio-group">
+                <input type="radio" id="lang_korea" name="fav_country" value="Korea">
+                <label for="lang_korea">เกาหลี</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="lang_japan" name="fav_country" value="Japan">
+                <label for="lang_japan">ญี่ปุ่น</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="lang_china" name="fav_country" value="China">
+                <label for="lang_china">จีน</label>
+            </div>
+
+            <h3>(ยกตัวอย่าง)Platfromของแนวอนิเมะที่คุณดู</h3>
+            <label for="platform">กรุณาเลือกเพียง 1 กลุ่ม:</label>
+            <select id="platform" name="platform">
+                <option value="Netflix">Netflix</option>
+                <option value="DisneyPlus">DisneyPlus</option>
+                <option value="Prime">Prime</option>
+                <option value="Youtube">Youtube</option>
+                <option value="iQIYI">iQIYI</option>
+                <option value="Billi Billi">Billi Billi</option>
+            </select>
+
+            <h3>🎬 This is Me: ตัวตนผ่านอนิเมะ</h3>
+            <div class="this-is-me-box">
+                <label for="anime_this_is_me">ชื่อเรื่องอนิเมะที่บ่งบอกความเป็นตัวคุณมากที่สุด:</label>
+                <input type="text" id="anime_this_is_me" name="anime_this_is_me" placeholder="เช่น SAO, Blue lock, Shadow" required>
+                
+                <label for="reason_this_is_me">เหตุผลที่อนิเมะเรื่องนี้สะท้อนตัวตนของคุณ:</label>
+                <textarea id="reason_this_is_me" name="reason_this_is_me" rows="3" placeholder="อธิบายสั้นๆ ว่าทำไมเรื่องนี้ถึงตรงกับตัวคุณมากที่สุด..."></textarea>
+            </div>
+
+            <!-- ปุ่มส่งข้อมูล -->
+            <div class="button-group">
+                <input type="submit" value="ส่งคำตอบ">
+                <input type="reset" value="กรอกใหม่">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

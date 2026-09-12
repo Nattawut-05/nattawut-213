@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container หลักขนาด 1024px สีพื้นหลัง antiquewhite พร้อมเส้นขอบสีฟ้า */
+.container {
+    width: 1024px;
+    background-color: antiquewhite;
+    border: 2px solid #2563eb;
+    padding: 25px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 52px;
+    color: blue;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.charts-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid pink;
+    padding: 15px;
+    background-color: transparent;
+}
+
+/* กล่องกราฟแนวนอน */
+.container-gph {
+    width: 460px;
+    height: 400px;
+    padding: 15px;
+    border: 1px solid rgb(136, 7, 241);
+    background-color: rgba(0, 255, 255, 0.171);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.bar-block {
+    display: flex;
+    align-items: center;
+}
+
+.bar-name {
+    font-size: 28px;
+    color: blue;
+    width: 80px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.bar {
+    height: 50px;
+    background-color: chartreuse;
+    border: 1px solid red;
+    font-size: 20px;
+    text-align: right;
+    line-height: 50px;
+    padding-right: 8px;
+}
+
+/* กล่องกราฟแนวตั้ง */
+.container2gph {
+    width: 460px;
+    height: 400px;
+    padding: 15px;
+    border: 1px solid rgb(136, 7, 241);
+    background-color: rgba(0, 255, 255, 0.171);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.bar2block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.bar2 {
+    width: 65px;
+    background-color: rgb(126, 186, 235);
+    border: 1px solid red;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.bar2name {
+    font-size: 28px;
+    color: blue;
+    width: 65px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #000;
+}
